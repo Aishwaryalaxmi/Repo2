@@ -1,0 +1,14 @@
+{
+  "pins" : [
+    {
+      "identity" : "repo1",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Aishwaryalaxmi/Repo1",
+      "state" : {
+        "branch" : "main",
+        "revision" : "b3dd6353b79ee189548071db5ad6701a2c0ac2a1"
+      }
+    }
+  ],
+  "version" : 2
+}

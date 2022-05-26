@@ -16,6 +16,7 @@
 		2FCB0554283E68D9003F1E56 /* TestSwiftPackageProjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FCB0553283E68D9003F1E56 /* TestSwiftPackageProjectTests.swift */; };
 		2FCB055E283E68D9003F1E56 /* TestSwiftPackageProjectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FCB055D283E68D9003F1E56 /* TestSwiftPackageProjectUITests.swift */; };
 		2FCB0560283E68D9003F1E56 /* TestSwiftPackageProjectUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FCB055F283E68D9003F1E56 /* TestSwiftPackageProjectUITestsLaunchTests.swift */; };
+		2FCB056E283E6AE8003F1E56 /* TestSwiftPackage in Frameworks */ = {isa = PBXBuildFile; productRef = 2FCB056D283E6AE8003F1E56 /* TestSwiftPackage */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2FCB056E283E6AE8003F1E56 /* TestSwiftPackage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -143,6 +145,9 @@
 			dependencies = (
 			);
 			name = TestSwiftPackageProject;
+			packageProductDependencies = (
+				2FCB056D283E6AE8003F1E56 /* TestSwiftPackage */,
+			);
 			productName = TestSwiftPackageProject;
 			productReference = 2FCB0539283E68D8003F1E56 /* TestSwiftPackageProject.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +220,9 @@
 				Base,
 			);
 			mainGroup = 2FCB0530283E68D8003F1E56;
+			packageReferences = (
+				2FCB056C283E6AE8003F1E56 /* XCRemoteSwiftPackageReference "Repo1" */,
+			);
 			productRefGroup = 2FCB053A283E68D8003F1E56 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -596,6 +604,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		2FCB056C283E6AE8003F1E56 /* XCRemoteSwiftPackageReference "Repo1" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Aishwaryalaxmi/Repo1";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		2FCB056D283E6AE8003F1E56 /* TestSwiftPackage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2FCB056C283E6AE8003F1E56 /* XCRemoteSwiftPackageReference "Repo1" */;
+			productName = TestSwiftPackage;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 2FCB0531283E68D8003F1E56 /* Project object */;
 }
