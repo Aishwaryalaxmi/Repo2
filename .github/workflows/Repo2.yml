@@ -16,3 +16,5 @@ jobs:
         run: |
           echo Add other custom actions to build,
           echo test, and deploy your project.
+      - name: Update Swift Packaga
+        run: xcodebuild -resolvePackageDependencies
