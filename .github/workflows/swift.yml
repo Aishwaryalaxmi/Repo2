@@ -1,0 +1,32 @@
+name: CI
+on: 
+   pull_request
+#   repository_dispatch:
+#     types: [on_token_update]
+      
+jobs:
+  build:
+    runs-on: macos-12
+    steps:
+    
+      - name: Checkout
+        uses: actions/checkout@v3
+        with:
+          repository: 'Aishwaryalaxmi/Repo2'
+          token: ${{ secrets.API_TOKEN_GITHUB }}
+          
+      - name: Set Xcode version
+        run: |
+          ls -l /Applications | grep 'Xcode'
+          sudo xcode-select -s /Applications/Xcode_13.4.app
+      - name: Delete Derived Data
+        run: | 
+           rm -rf ~/Library/Developer/Xcode/DerivedData/
+      - name: SwiftFormat
+        run: |
+          swiftformat .
+      - name: Commit and push changes
+        uses: devops-infra/action-commit-push@v0.9.0
+        with:
+          github_token: ${{ secrets.API_TOKEN_GITHUB }}
+          commit_message: Swift format
