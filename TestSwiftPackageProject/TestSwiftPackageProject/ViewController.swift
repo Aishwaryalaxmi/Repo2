@@ -8,7 +8,7 @@
 import UIKit
 import TestSwiftPackage
 
-class ViewController: UIViewController {
+          class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
